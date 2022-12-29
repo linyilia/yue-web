@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="header">
+    <div class="header">    
       <img src="@/assets/image/bg.png" alt="" />
       <div class="nav">
         <span
@@ -18,13 +18,26 @@
 <script>
 import NavBar from "./components/NavBar";
 import yueVideo from "@/components/video.vue"
+import { reactive } from '@vue/reactivity';
 export default {
   components: {
     NavBar,
     yueVideo
   },
   setup() {
-    return {};
+    let _arr=["c","d"]
+    let list=reactive([]) 
+    // list.push("a")
+    // list.push("b")
+    list=_arr
+    list[0]="e"
+    let a =reactive(1)
+    a=2
+    let obj=reactive({a:"a"})
+    obj.a="a1"
+    obj.b="b"
+    console.log(list);
+    return {list,a,obj};
   },
 };
 </script>
