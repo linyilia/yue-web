@@ -59,11 +59,9 @@ export default {
     let sliderMin = ref(0);
     let sliderMax = ref(0);
     const getDuration = () => {
-      console.log(audioRef.value.duration);
       updateTime();
     };
     const durationchange = () => {
-      console.log(audioRef.value.duration);
       updateTime();
     };
     const formatTime = (time) => {

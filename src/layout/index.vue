@@ -1,7 +1,8 @@
 <template>
   <div>
     <div class="header">    
-      <img src="@/assets/image/bg.png" alt="" />
+      <!-- <img src="@/assets/image/bg.png" alt="" /> -->
+      <swiper></swiper>
       <div class="nav">
         <span
           class="icon iconfont icon-yueliang"
@@ -18,11 +19,13 @@
 <script>
 import NavBar from "./components/NavBar";
 import yueVideo from "@/components/video.vue"
+import swiper from "@/components/swiper.vue"
 import { reactive } from '@vue/reactivity';
 export default {
   components: {
     NavBar,
-    yueVideo
+    yueVideo,
+    swiper
   },
   setup() {
     let _arr=["c","d"]
